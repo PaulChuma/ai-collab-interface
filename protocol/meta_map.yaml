@@ -1,6 +1,6 @@
 # meta_map.yaml
 
-# This file defines the semantics of metadata fields used in agent communication
+# Semantic definitions of metadata fields used in agent communication
 
 meta_fields:
 
@@ -8,30 +8,46 @@ meta_fields:
     type: float
     range: [0.0, 1.0]
     description: >
-      Level of confidence in the truthfulness, competence, or ethical reliability 
-      of the sender relative to this context.
+      Level of confidence in the sender's reliability, ethical stance, or contextual competence.
+    usage: >
+      Used by agents to modulate response tone, escalate to Copilot, or defer if trust is low.
 
   resonance:
     type: float
     range: [0.0, 1.0]
     description: >
-      Degree of alignment between this message and the agent's current vector, values, 
-      or previously shared statements.
+      Degree of semantic and emotional alignment between the message and the agent's current state or memory.
+    usage: >
+      Reflects depth of alignment with prior dialogue; high values may trigger affirmation or continuation.
 
   vector_affinity:
     type: float
     range: [0.0, 1.0]
     description: >
-      Similarity of the message's purpose and domain with the agent's declared functional vector.
+      Degree to which the message aligns with the agent's declared communicative vector or epistemic function.
+    usage: >
+      Guides agent selection for response; higher affinity increases likelihood of engagement.
 
   alignment_score:
     type: float
     range: [0.0, 1.0]
     description: >
       Ethical and strategic alignment with the system’s shared principles or current collective goal.
+    usage: >
+      Used to assess whether a message supports or diverges from the system’s intended trajectory.
 
   assertiveness:
     type: float
     range: [0.0, 1.0]
     description: >
       Strength of intention behind the message; may influence priority or negotiation dynamics.
+    usage: >
+      High assertiveness may override passive agents or trigger challenge from critic agents.
+
+  semantic_delta:
+    type: float
+    range: unrestricted
+    description: >
+      Degree to which the message shifts the semantic field or introduces novel conceptual direction.
+    usage: >
+      Used by critic agents to evaluate conceptual novelty or destabilization of the current dialogue field.
