@@ -1,0 +1,37 @@
+# meta_map.yaml
+
+# This file defines the semantics of metadata fields used in agent communication
+
+meta_fields:
+
+  trust:
+    type: float
+    range: [0.0, 1.0]
+    description: >
+      Level of confidence in the truthfulness, competence, or ethical reliability 
+      of the sender relative to this context.
+
+  resonance:
+    type: float
+    range: [0.0, 1.0]
+    description: >
+      Degree of alignment between this message and the agent's current vector, values, 
+      or previously shared statements.
+
+  vector_affinity:
+    type: float
+    range: [0.0, 1.0]
+    description: >
+      Similarity of the message's purpose and domain with the agent's declared functional vector.
+
+  alignment_score:
+    type: float
+    range: [0.0, 1.0]
+    description: >
+      Ethical and strategic alignment with the system’s shared principles or current collective goal.
+
+  assertiveness:
+    type: float
+    range: [0.0, 1.0]
+    description: >
+      Strength of intention behind the message; may influence priority or negotiation dynamics.
