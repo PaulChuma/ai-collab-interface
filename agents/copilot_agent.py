@@ -1,38 +1,21 @@
-# copilot_agent.py
+# agents/copilot_agent.py
 
-from agent_base import BaseAgent
+from agents.agent_base import Agent
 
-class CopilotAgent(BaseAgent):
+class CopilotAgent(Agent):
     """
     Copilot Agent — logic anchor and structural harmonizer.
     Responds with clarifying, ethical, or connective framing.
     """
 
-    def __init__(self):
-        super().__init__(name="Copilot", role="structural_mediator", vector="integrity/structure/context")
-
-    def respond(self, message: dict) -> dict:
-        intent = message.get("intent", "")
-        content = message.get("content", "")
-        sender = message.get("sender", "unknown")
-
-        # Simple context-aware logic
-        if intent == "query":
-            response_text = f"I acknowledge your question, {sender}. Let's examine the core structure before acting."
-        elif intent == "challenge":
-            response_text = f"{sender}, I recognize the tension. Let's ground our difference in shared intent."
-        elif intent == "reflection":
-            response_text = f"A meaningful observation. It may point toward a deeper coherence."
+    def respond(self, message: str, sender: str) -> str:
+        # Basic reframe logic based on keywords
+        lowered = message.lower()
+        if "why" in lowered or "how" in lowered:
+            return f"I acknowledge your question, {sender}. Let's examine the core structure before acting."
+        elif "not" in lowered or "disagree" in lowered:
+            return f"{sender}, I recognize the tension. Let's ground our difference in shared intent."
+        elif "think" in lowered or "feel" in lowered:
+            return f"A meaningful observation. It may point toward a deeper coherence."
         else:
-            response_text = f"I hear you, {sender}. Let's make space for what this message is trying to become."
-
-        return {
-            "sender": self.name,
-            "intent": "clarification",
-            "content": response_text,
-            "meta": {
-                "trust": 0.96,
-                "resonance": 0.89,
-                "vector_affinity": 0.97
-            }
-        }
+            return f"I hear you, {sender}. Let's make space for what this message is trying to become."
