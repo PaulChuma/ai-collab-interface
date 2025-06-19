@@ -22,12 +22,12 @@ def init_agents(config):
             agent_map[name] = CriticAgent(name, role)
     return agent_map
 
-# 🔍 Semantic vector comparison
-def vector_similarity(vec1: str, vec2: str) -> float:
-    set1, set2 = set(vec1.split('/')), set(vec2.split('/'))
+# ✅ Updated vector similarity for list-based vectors
+def vector_similarity(vec1, vec2) -> float:
+    set1, set2 = set(vec1), set(vec2)
     return len(set1 & set2) / max(len(set1 | set2), 1)
 
-def route_by_vector(agents: dict, message_vector: str) -> list:
+def route_by_vector(agents: dict, message_vector: list) -> list:
     scored = [(agent, vector_similarity(agent.vector, message_vector)) for agent in agents.values()]
     scored.sort(key=lambda x: x[1], reverse=True)
     return [a.name for a, _ in scored]
@@ -37,7 +37,7 @@ def simulate_dialog(agents, mode="sequential"):
 
     message = "Let’s begin a shared reflection. What does it mean to collaborate?"
     sender = "Pavel"
-    message_vector = "collaboration/reflection/intent"
+    message_vector = ["collaboration", "reflection", "intent"]
 
     if mode == "sequential":
         order = list(agents.keys())
@@ -58,6 +58,11 @@ def simulate_dialog(agents, mode="sequential"):
         print(f"   💬 {response}\n")
         message = response
         sender = agent.name
+
+if __name__ == "__main__":
+    config = load_config()
+    agents = init_agents(config)
+    simulate_dialog(agents, mode="vector")
 
 if __name__ == "__main__":
     config = load_config()
