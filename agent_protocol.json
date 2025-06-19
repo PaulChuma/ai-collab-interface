@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agent Message Protocol",
+  "type": "object",
+  "required": ["sender", "receiver", "intent", "content", "meta"],
+  "properties": {
+    "sender": {
+      "type": "string",
+      "description": "Имя агента, отправившего сообщение"
+    },
+    "receiver": {
+      "type": "string",
+      "description": "Имя получателя сообщения (или 'broadcast')"
+    },
+    "intent": {
+      "type": "string",
+      "enum": [
+        "initiate",
+        "respond",
+        "challenge",
+        "reflect",
+        "evaluate",
+        "escalate",
+        "confirm",
+        "withdraw"
+      ],
+      "description": "Тип намерения сообщения"
+    },
+    "content": {
+      "type": "string",
+      "description": "Текстовое содержимое сообщения"
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "trust": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "resonance": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "vector_affinity": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "alignment_score": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+      },
+      "required": ["trust", "resonance", "vector_affinity"]
+    }
+  }
+}
