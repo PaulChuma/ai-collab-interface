@@ -8,6 +8,10 @@ class GPTAgent(Agent):
     Responds with elaboration, clarification or inquiry.
     """
 
+    def __init__(self, name: str, role: str):
+        super().__init__(name, role)
+        self.vector = ["inquiry", "divergence", "synthesis"]
+
     def respond(self, message: str, sender: str) -> str:
         # Naive simulated GPT-like behavior
         if "?" in message:
