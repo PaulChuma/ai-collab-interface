@@ -4,12 +4,17 @@ agents:
   - name: agent_a
     type: GPTAgent
     role: Инициатор
-    model: gpt-4
+    path: agents/gpt_agent.py
 
   - name: agent_b
+    type: CopilotAgent
+    role: Структурный помощник
+    path: agents/copilot_agent.py
+
+  - name: agent_c
     type: CriticAgent
     role: Оценщик
-    model: copilot
+    path: agents/critic_agent.py
 
 router:
   type: basic
