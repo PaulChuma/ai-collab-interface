@@ -1,0 +1,20 @@
+project_name: Multi-Agent AI Collaboration Interface
+
+agents:
+  - name: agent_a
+    type: GPTAgent
+    role: Инициатор
+    model: gpt-4
+
+  - name: agent_b
+    type: CriticAgent
+    role: Оценщик
+    model: copilot
+
+router:
+  type: basic
+  logic: sequential
+
+memory:
+  enabled: true
+  type: ephemeral
