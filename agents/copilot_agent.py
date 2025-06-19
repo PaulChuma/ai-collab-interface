@@ -1,15 +1,16 @@
-# agents/copilot_agent.py
-
 from agents.agent_base import Agent
 
 class CopilotAgent(Agent):
     """
-    Copilot Agent — logic anchor and structural harmonizer.
-    Responds with clarifying, ethical, or connective framing.
+    Copilot Agent — structural and ethical mediator.
+    Responds with clarifying or grounding logic.
     """
 
+    def __init__(self, name: str, role: str):
+        super().__init__(name, role)
+        self.vector = ["structure", "ethics", "clarification"]
+
     def respond(self, message: str, sender: str) -> str:
-        # Basic reframe logic based on keywords
         lowered = message.lower()
         if "why" in lowered or "how" in lowered:
             return f"I acknowledge your question, {sender}. Let's examine the core structure before acting."
