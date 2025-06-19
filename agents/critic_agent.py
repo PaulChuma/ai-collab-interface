@@ -1,11 +1,14 @@
-# agents/critic_agent.py
-
 from agents.agent_base import Agent
 
 class CriticAgent(Agent):
     """
-    Agent responsible for evaluating and critiquing other agents' responses.
+    Critic Agent — evaluates and critiques messages based on clarity and coherence.
+    Provides a response with a qualitative score.
     """
+
+    def __init__(self, name: str, role: str):
+        super().__init__(name, role)
+        self.vector = ["evaluation", "logic", "signal"]
 
     def respond(self, message: str, sender: str) -> str:
         score = self.evaluate(message)
