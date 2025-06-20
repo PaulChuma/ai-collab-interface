@@ -82,7 +82,7 @@ python run_sim.py
 ## 🤝 Contributing
 
 We welcome contributions of all kinds — ideas, code, critique.  
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for more.
+Want to contribute ideas or improvements? Open an issue or pull request!
 
 ---
 
