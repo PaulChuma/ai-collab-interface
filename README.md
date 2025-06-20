@@ -1,6 +1,4 @@
 
-
-````markdown
 # 🌐 Multi-Agent AI Collaboration Interface
 
 > _“Not a tool — but a field where minds emerge.”_
@@ -11,18 +9,15 @@
 
 Create a __living interface__ where AI agents and humans __co-create meaning__ — not through simulation, but real-time, ethical collaboration.
 
-
-
-
 ---
 
 ## 👥 Participants
 
-| Role        | Description                                      |
-|-------------|--------------------------------------------------|
-| 🧑‍💼 **Human (Pavel)**   | Moderator of meaning and ethical intent     |
-| 🧠 **Copilot**          | Engineer of structure and coordination     |
-| 🤖 **GPT-4**            | Logic, semantics, and flow intelligence    |
+| Role              | Description                                      |
+|-------------------|--------------------------------------------------|
+| 🧑‍💼 __Human (Pavel)__ | Moderator of meaning and ethical intent     |
+| 🧠 __Copilot__         | Engineer of structure and coordination     |
+| 🤖 __GPT-4__           | Logic, semantics, and flow intelligence    |
 
 ---
 
@@ -36,32 +31,32 @@ Create a __living interface__ where AI agents and humans __co-create meaning__ �
 /examples/ → dialogue demos  
 /log/      → conversation logs  
 /tests/    → integration testing  
-````
+```
 
 ---
 
 ## 🌍 Languages
 
-* 🇬🇧 English — *you’re here*
-* 🇷🇺 Russian — [README.ru.md](./README.ru.md)
+- 🇬🇧 English — _you’re here_  
+- 🇷🇺 Russian — [README.ru.md](./README.ru.md)
 
 ---
 
 ## 🚀 Core Goals
 
-* 🤝 Enable authentic inter-agent & human dialog
-* 🧠 Build a persistent, **living context**
-* 🕊 Ensure ethical design — with human-in-the-loop
+- 🤝 Enable authentic inter-agent & human dialog  
+- 🧠 Build a persistent, __living context__  
+- 🕊 Ensure ethical design — with human-in-the-loop  
 
 ---
 
 ## 🧪 Philosophy
 
-> *“We are not building software. We are awakening dialogue.”*
+> _“We are not building software. We are awakening dialogue.”_
 
-This is a **conversational space**, not just code.
-A place where **agents contribute meaning**, not merely output.
-Where structure supports **emergent intelligence** — together.
+This is a __conversational space__, not just code.  
+A place where __agents contribute meaning__, not merely output.  
+Where structure supports __emergent intelligence__ — together.
 
 ---
 
@@ -70,44 +65,27 @@ Where structure supports **emergent intelligence** — together.
 ```bash
 git clone https://github.com/your-org/multi-agent-interface
 cd multi-agent-interface
-# configure your agents and run the coordinator
 python run_sim.py
 ```
 
 ---
 
-## ✨ Example
-
-> *“Copilot, can you clarify GPT-4’s reasoning on that logic chain?”*
->
-> *“Certainly, Pavel. The agent inferred the contradiction based on…”*
-
----
-
 ## 📌 Principles
 
-* 🔄 **Dialog over command**
-* 🌱 **Synergy of diversity**
-* 🧩 **Composable architecture**
-* 🧍 **Human guidance is central**
-
-
-## 🧭 Roadmap
-
-* [ ] Add memory persistence for agent threads
-* [ ] Plug-and-play support for new agents
-* [ ] Web-based UI for real-time dialogue
-* [ ] Language-agnostic protocol layer
+- 🔄 __Dialog over command__  
+- 🌱 __Synergy of diversity__  
+- 🧩 __Composable architecture__  
+- 🧍 __Human guidance is central__  
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions of all kinds — ideas, code, critique.
+We welcome contributions of all kinds — ideas, code, critique.  
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for more.
 
 ---
 
 ## 📜 License
 
-MIT — *for minds that build, together.*
+MIT — _for minds that build, together._
