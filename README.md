@@ -9,8 +9,8 @@
 
 ## 🧭 Mission
 
-<p>Create a <span style="font-weight:bold">living interface</span> where AI agents and humans 
-<span style="font-weight:bold">co-create meaning</span> — not through simulation, but real-time, ethical collaboration.</p>
+Create a __living interface__ where AI agents and humans __co-create meaning__ — not through simulation, but real-time, ethical collaboration.
+
 
 
 
